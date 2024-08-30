@@ -1,23 +1,4 @@
 /** @type {import('next').NextConfig} */
-const config = {
-	images: {
-		remotePatterns: [
-			{
-				hostname: "*",
-			},
-		],
-	},
-	experimental: {
-		typedRoutes: false,
-	},
-	output: "standalone",
-	// used in the Dockerfile
-	//output:
-	//	process.env.NEXT_OUTPUT === "standalone"
-	//		? "standalone"
-	//		: process.env.NEXT_OUTPUT === "export"
-	//		  ? "export"
-	//		  : undefined,
+module.exports = {
+  output: "standalone",
 };
-
-export default config;
