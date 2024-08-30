@@ -10,13 +10,14 @@ const config = {
 	experimental: {
 		typedRoutes: false,
 	},
+	output: "standalone",
 	// used in the Dockerfile
-	output:
-		process.env.NEXT_OUTPUT === "standalone"
-			? "standalone"
-			: process.env.NEXT_OUTPUT === "export"
-			  ? "export"
-			  : undefined,
+	//output:
+	//	process.env.NEXT_OUTPUT === "standalone"
+	//		? "standalone"
+	//		: process.env.NEXT_OUTPUT === "export"
+	//		  ? "export"
+	//		  : undefined,
 };
 
 export default config;
