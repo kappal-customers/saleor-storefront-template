@@ -6,7 +6,6 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"build:skip-codegen": "next build"
 		"start": "next start",
 		"predev": "pnpm run generate",
 		"prebuild": "pnpm run generate",
