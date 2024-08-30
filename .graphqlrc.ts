@@ -3,7 +3,8 @@ import type { CodegenConfig } from "@graphql-codegen/cli";
 
 loadEnvConfig(process.cwd());
 
-let schemaUrl = process.env.NEXT_PUBLIC_SALEOR_API_URL;
+# let schemaUrl = process.env.NEXT_PUBLIC_SALEOR_API_URL;
+let schemaUrl = "https://storefront1.saleor.cloud/graphql/"
 
 if (process.env.GITHUB_ACTION === "generate-schema-from-file") {
 	schemaUrl = "schema.graphql";
