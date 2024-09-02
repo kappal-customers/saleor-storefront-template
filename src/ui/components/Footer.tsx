@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { LinkWithChannel } from "../atoms/LinkWithChannel";
 import { ChannelSelect } from "./ChannelSelect";
 import { ChannelsListDocument, MenuGetBySlugDocument } from "@/gql/graphql";
@@ -17,7 +16,7 @@ export async function Footer({ channel }: { channel: string }) {
 					// and use app token instead
 					Authorization: `Bearer ${process.env.SALEOR_APP_TOKEN}`,
 				},
-		  })
+			})
 		: null;
 	const currentYear = new Date().getFullYear();
 
@@ -82,15 +81,14 @@ export async function Footer({ channel }: { channel: string }) {
 				)}
 
 				<div className="flex flex-col justify-between border-t border-neutral-200 py-10 sm:flex-row">
-					<p className="text-sm text-neutral-500">Copyright &copy; {currentYear} Your Store, Inc.</p>
+					<p className="text-sm text-neutral-500">
+						Copyright &copy; {currentYear} Kappal Software Private Limited.
+					</p>
 					<p className="flex gap-1 text-sm text-neutral-500">
 						Powered by{" "}
-						<Link target={"_blank"} href={"https://saleor.io/"}>
-							Saleor
+						<Link target={"_blank"} href={"https://kappal.in/"}>
+							Kappal
 						</Link>{" "}
-						<Link href={"https://github.com/saleor/saleor"} target={"_blank"} className={"opacity-30"}>
-							<Image alt="Saleor github repository" height={20} width={20} src={"/github-mark.svg"} />
-						</Link>
 					</p>
 				</div>
 			</div>
